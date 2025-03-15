@@ -1,4 +1,5 @@
 discord.py
 google-generativeai
-fastapi
-uvicorn
+pillow
+python-dotenv
+requests
