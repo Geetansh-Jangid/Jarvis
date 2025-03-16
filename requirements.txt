@@ -4,3 +4,4 @@ Pillow
 requests
 Flask
 python-dotenv
+PyNaCl
