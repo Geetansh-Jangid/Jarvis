@@ -388,4 +388,16 @@ This bot uses Google's Gemini AI to generate text and images based on your promp
 
 if __name__ == "__main__":
     logger.info("Starting bot...")
-    bot.run(DISCORD_TOKEN)
+    
+    # Define function to run Discord bot
+    def run_discord_bot():
+        bot.run(DISCORD_TOKEN)
+    
+    # Start Discord bot in a separate thread
+    bot_thread = Thread(target=run_discord_bot)
+    bot_thread.start()
+    
+    # Run Flask web server with proper host binding
+    # '0.0.0.0' allows external connections (necessary for cloud platforms)
+    logger.info(f"Starting web server on port {PORT}")
+    app.run(host='0.0.0.0', port=PORT)
