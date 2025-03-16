@@ -1,8 +1,6 @@
 discord.py
 google-genai
-pillow
-python-dotenv
+Pillow
 requests
-PyNaCl
-psycopg2-binary
-dj-database-url
+Flask
+python-dotenv
