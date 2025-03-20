@@ -512,6 +512,8 @@ Jarvis can generate text and images based on your prompts, and it can edit your 
 
 # Slash commands
 @bot.tree.command(name="ask", description="Generate content using Jarvis")
+@app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
+@app_commands.user_install()
 @app_commands.describe(prompt="Your question or prompt for Jarvis")
 async def slash_ask(interaction: discord.Interaction, prompt: str, attachment: discord.Attachment = None):
     """Slash command to generate content using Gemini."""
