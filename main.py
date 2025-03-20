@@ -622,6 +622,8 @@ async def slash_ask(interaction: discord.Interaction, prompt: str, attachment: d
 
        
 @bot.tree.command(name="guide", description="Display a guide on how to use Jarvis")
+@app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
+@app_commands.user_install()
 async def slash_guide(interaction: discord.Interaction):
     """Slash command to display a guide on how to use Jarvis."""
     guide_text = f"""
