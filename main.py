@@ -219,7 +219,7 @@ async def generate_content(prompt, image_url=None, history=None):
 
         # Make the API call with correct structure
         response = genai_client.models.generate_content(
-            model="gemini-2.0-flash-exp",
+            model="gemini-2.0-flash-preview-image-generation",
             contents=messages,
             config=types.GenerateContentConfig(
                 response_modalities=["Text", "Image"]
